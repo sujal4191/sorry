@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>From My Heart ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:"Segoe UI",sans-serif;
+}
+
+body{
+  margin:0;
+  overflow:hidden;
+  background:#000;
+  color:#fff;
+}
+
+/* PAGE SYSTEM */
+.page{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 1s ease, transform 1s ease;
+  transform:scale(0.96);
+}
+
+.page.active{
+  opacity:1;
+  pointer-events:auto;
+  transform:scale(1);
+}
+
+h1{
+  margin-bottom:15px;
+}
+
+p{
+  line-height:1.7;
+  opacity:0.95;
+}
+
+/* BUTTONS */
+button{
+  margin-top:25px;
+  padding:14px 34px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff5f6d,#ffc371);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
+/* NO BUTTON */
+#noBtn{
+  position:absolute;
+  background:linear-gradient(125deg,#444,#777);
+}
+
+/* BACKGROUNDS */
+#p1{background:radial-gradient(circle at top,#2b1055,#000);}
+#p2{background:linear-gradient(135deg,#141e30,#243b55);}
+#p3{background:radial-gradient(circle at top,#1b2735,#090a0f);}
+#p4{background:radial-gradient(circle,#1a1a1a,#000);}
+
+/* GLASS CARD */
+.card{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(8px);
+  border-radius:18px;
+  padding:22px;
+  max-width:720px;
+  max-height:65vh;
+  overflow-y:auto;
+  animation:fadeUp 1.2s ease;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* FLOATING HEARTS */
+.heart{
+  position:absolute;
+  font-size:18px;
+  animation:float 6s linear infinite;
+  opacity:0.7;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh);opacity:0;}
+  50%{opacity:1;}
+  to{transform:translateY(-10vh);opacity:0;}
+}
+
+/* STARS */
+.star{
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:white;
+  border-radius:50%;
+  animation:twinkle 3s infinite;
+  opacity:0.4;
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:0.2;}
+  50%{opacity:0.8;}
+}
+
+/* TYPEWRITER */
+.type{
+  font-size:22px;
+  max-width:340px;
+  line-height:1.6;
+}
+
+/* INVISIBLE STRING */
+#string-container{
+  position:relative;
+  width:260px;
+  height:120px;
+  margin:30px auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.heart-node{
+  font-size:28px;
+  animation:pulse 2s infinite;
+}
+
+.string{
+  position:absolute;
+  left:35px;
+  right:35px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.8),transparent);
+  animation:stringFlow 3s infinite;
+}
+
+@keyframes stringFlow{
+  0%{opacity:.2;}
+  50%{opacity:1;}
+  100%{opacity:.2;}
+}
+
+@keyframes pulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.15);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <h1 style="animation:pulse 2s infinite;">Hey siyuuuuuu… ❤️</h1>
+  <div class="type" id="typeText"></div>
+  <p style="opacity:.7;margin-top:18px;"></p>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <div class="card">
+    <h1>I'm so Sorry 🤍</h1>
+    <p>
+      I'm really sorry for what I said. I misunderstood your words, and I hurt you because of that. <br><br>
+
+When you said “I need you,” it meant something pure and real, but my response didn't reflect that. That “kab tak kai liye” came from my confusion, not from a lack of trust in you and I truly regret saying it. <br><br>
+
+Please believe me when I say this: I trust you. I trust your feelings, your honesty, and the courage it took for you to share parts of yourself that you've never shared with anyone before. I know that wasn't easy, and I value it more than I can put into words. <br><br>
+
+I never meant to question you or make you feel like your feelings weren't enough. If my words made you feel hurt or doubted, I'm deeply sorry. You didn't deserve that. <br><br>
+
+I care about you, and I want us to be okay. I want us to understand each other better and grow stronger from this. Please forgive me I'm here, and I'm not going anywhere. <br><br>
+    </p>
+    <button onclick="next(2)">Continue</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <div class="card">
+    <h1>Invisible String Theory ✨</h1>
+    <p>
+
+
+Invisible String Theory suna hai?
+Iske baare mein kehte hain ki universe do logon ko tab tak alag rakhta hai,
+jab tak unke milne ka sahi waqt na aa jaaye.<br><br>
+
+Woh do log ek hi shehar mein ho sakte hain,
+shayad ek hi gali se roz guzarte hon,
+ek hi jagah par waqt bitaate hon 
+phir bhi kabhi milte nahi.<br><br>
+
+Par jab waqt sahi hota hai,
+toh ek andekhi dor unhe dheere-dheere
+ek dusre ki taraf kheench laati hai.
+Jaise sab kuch pehle se likha hua ho,
+jaise unki destinies ne chupchaap
+ek hi raaste par aa kar milna decide kar liya ho.<br><br>
+
+Shayad isi liye kehte hain 
+jo chala gaya, woh kabhi tumhara tha hi nahi.
+Aur jo tumhara hota hai,
+woh chahe kitni bhi door ho,
+chahe kisi bhi raaste par ho,
+kisi na kisi din tum tak aa hi jaata hai.<br><br>
+
+Isi wajah se hum itne qareeb hote hue bhi
+pehle kabhi nahi milte.
+Kyuki sahi log aksar galat waqt par mil jaate hain 
+chhodne ke liye nahi,
+balki sab kuch theek karne ke liye,
+saath nibhane ke liye.<br><br>
+
+Aur jab woh waqt aata hai,
+toh sab kuch magical sa lagne lagta hai.
+Har cheez ek coincidence jaise lagti hai 
+par asal mein woh coincidence nahi hota,
+woh universe ka perfectly aligned plan hota hai.<br><br>
+
+Shayad ab meri zindagi ke har sawaal ka jawab
+sirf ek cheez mein chhupa hai 
+sahi waqt.<br><br>
+
+Kyuki sahi waqt aane par,
+woh rishta, woh mohabbat,
+chahe kaise bhi ho,
+tum tak aa hi jaati hai.<br><br>
+
+Aur isi ko kehte hain 
+The Invisible String Theory. 💫🤍<br><br>
+    </p>
+
+    <div id="string-container">
+      <div class="heart-node">❤️</div>
+      <div class="string"></div>
+      <div class="heart-node">❤️</div>
+    </div>
+
+    <p>Sayad humara yun milna bhi koi coincidence nahi</p>
+    <button onclick="next(3)">One Last Thing</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <h1>Will You Forgive Me? 🥺</h1>
+  <p>No pressure. Just honesty.</p>
+
+  <div style="margin-top:30px;position:relative;height:140px;">
+    <button onclick="forgive()">Yes 🤍</button>
+    <button id="noBtn">No 😒</button>
+  </div>
+
+  <h2 id="thanks" style="display:none;margin-top:25px;">
+   Thank you… for giving me one more chance.
+   I promise to do better. ❤️ <br><br>
+   My dummyyyy 🤍
+  </h2>
+</div>
+
+<script>
+/* TYPEWRITER */
+const text = "I know things haven’t felt right...\nBut please give me one moment.";
+let i=0;
+const el=document.getElementById("typeText");
+
+function type(){
+  if(i<text.length){
+    el.innerHTML+= text[i]==="\n"?"<br>":text[i];
+    i++;
+    setTimeout(type,60);
+  }
+}
+type();
+
+/* TAP ANYWHERE */
+document.getElementById("p1").addEventListener("click",()=>next(1));
+
+/* PAGE NAV */
+function next(n){
+  document.getElementById("p"+n).classList.remove("active");
+  document.getElementById("p"+(n+1)).classList.add("active");
+  hearts();
+}
+
+/* HEARTS */
+function hearts(){
+  for(let i=0;i<8;i++){
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(Math.random()*2+4)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6000);
+  }
+}
+
+/* STARS */
+for(let i=0;i<50;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*100+"vh";
+  s.style.animationDelay=Math.random()*3+"s";
+  document.body.appendChild(s);
+}
+
+/* NO BUTTON ESCAPE */
+const noBtn=document.getElementById("noBtn");
+function escape(){
+  noBtn.style.left=Math.random()*(window.innerWidth-120)+"px";
+  noBtn.style.top=Math.random()*(window.innerHeight-120)+"px";
+}
+noBtn.addEventListener("mouseenter",escape);
+noBtn.addEventListener("touchstart",escape);
+
+/* YES */
+function forgive(){
+  document.getElementById("thanks").style.display="block";
+  noBtn.style.display="none";
+  hearts();
+}
+</script>
+
+</body>
+</html>
